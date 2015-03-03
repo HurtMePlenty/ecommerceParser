@@ -69,7 +69,8 @@ public class Main {
      * locale of your choice.
      */
     //private static final String ITEM_ID = "654321";
-    private static final String ITEM_ID = "0804194726";
+    //private static final String ITEM_ID = "0804194726";
+    private static final String ITEM_ID = "887899441127";   //UPC
     //private static final String ITEM_ID = "1101874279";
     //private static final String ITEM_ID = "0545010225";
 
@@ -102,11 +103,21 @@ public class Main {
         params.put("ResponseGroup", "Large");
 
         params.put("AssociateTag", "Alexey-20");
-        params.put("IdType", "ISBN");
+        params.put("IdType", "UPC");
         params.put("SearchIndex", "All");
 
         requestUrl = helper.sign(params);
-        System.out.println("Signed Request is \"" + requestUrl + "\"");
+        try {
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            DocumentBuilder db = dbf.newDocumentBuilder();
+            Document doc = db.parse(requestUrl);
+            int a =1;
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+
+        System.out.println(requestUrl);
+       /* System.out.println("Signed Request is \"" + requestUrl + "\"");
 
         title = fetchTitle(requestUrl);
         System.out.println("Signed Title is \"" + title + "\"");
@@ -114,7 +125,7 @@ public class Main {
 
         /* Here is an example with string form, where the requests parameters have already been concatenated
          * into a query string. */
-        System.out.println("String form example:");
+       /* System.out.println("String form example:");
         String queryString = "Service=AWSECommerceService&Version=2009-03-31&Operation=ItemLookup&ResponseGroup=Small&ItemId="
                 + ITEM_ID;
         requestUrl = helper.sign(queryString);
@@ -122,7 +133,7 @@ public class Main {
 
         title = fetchTitle(requestUrl);
         System.out.println("Title is \"" + title + "\"");
-        System.out.println();
+        System.out.println();    */
 
     }
 

@@ -1,0 +1,11 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework:spring-context:4.0.6.RELEASE'
+    compile 'commons-codec:commons-codec:1.9'
+}

@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="csvSupplierSource" class="ecommerceParser.pupplierModule.CsvSupplierSource">
+        <property name="csvSeparator" value=","></property>
+        <property name="inputCsvFileName" value="input.csv"></property>
+    </bean>
+
+    <bean id="csvOutputProcessor" class="ecommerceParser.outputModule.CsvOutputProcessor">
+        <property name="csvSeparator" value=","></property>
+        <property name="outputCsvFileName" value="output.csv"></property>
+    </bean>
+
+    <bean id="priceFinder" class="ecommerceParser.priceFinderModule.PriceFinder">
+        <property name="supplierSourceList">
+            <list>
+                <ref bean="csvSupplierSource"></ref>
+            </list>
+        </property>
+        <property name="outputProcessor" ref="csvOutputProcessor"></property>
+    </bean>
+
+</beans>

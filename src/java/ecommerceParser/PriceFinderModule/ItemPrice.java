@@ -1,4 +1,4 @@
-package ecommerceParser.PriceFinder;
+package ecommerceParser.priceFinderModule;
 
 public class ItemPrice {
 

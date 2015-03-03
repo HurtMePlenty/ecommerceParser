@@ -1,4 +1,4 @@
-package ecommerceParser.pupplierModule;
+package ecommerceParser.supplierModule;
 
 import ecommerceParser.priceFinderModule.Item;
 import ecommerceParser.priceFinderModule.SupplierSource;

@@ -19,7 +19,7 @@
  *
  */
 
-package ecommerceParser;
+package ecommerceParser.searchModule;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,6 +27,7 @@ import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import ecommerceParser.searchModule.SignedRequestsHelper;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 

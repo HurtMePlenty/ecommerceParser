@@ -22,4 +22,13 @@
         <property name="outputProcessor" ref="csvOutputProcessor"></property>
     </bean>
 
+    <bean id="amazonSearchEngine" class="ecommerceParser.searchModule.AmazonSearchEngine">
+        <property name="engineName" value="Amazon"></property>
+    </bean>
+
+    <bean id="amazonSearchEngine2" class="ecommerceParser.searchModule.AmazonSearchEngine">
+        <property name="engineName" value="Amazon"></property>
+    </bean>
+
+
 </beans>

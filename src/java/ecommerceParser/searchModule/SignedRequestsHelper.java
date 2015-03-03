@@ -19,7 +19,7 @@
  *
  */
 
-package ecommerceParser;
+package ecommerceParser.searchModule;
 
 import java.io.UnsupportedEncodingException;
 

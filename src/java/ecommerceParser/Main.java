@@ -111,7 +111,7 @@ public class Main {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(requestUrl);
-            int a =1;
+            int a = 1;
         }catch (Exception e){
             throw new RuntimeException(e);
         }

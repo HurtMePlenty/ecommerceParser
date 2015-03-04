@@ -58,7 +58,7 @@ public class CsvOutputProcessor implements OutputProcessor {
 
         //form body
         for (Item item : itemList) {
-            result.append("/n");
+            result.append("\n");
             result.append(item.getIdType().toString());
             result.append(csvSeparator);
             result.append(item.getId());
@@ -67,7 +67,7 @@ public class CsvOutputProcessor implements OutputProcessor {
             for (String key : keys) {
                 result.append(csvSeparator);
                 for (ItemPrice itemPrice : item.getItemPriceList()) {
-                    if(itemPrice.getSupplierId().equals(key)){
+                    if (itemPrice.getSupplierId().equals(key)) {
                         result.append(itemPrice.getPrice());
                         continue keyLoop;
                     }
@@ -75,10 +75,10 @@ public class CsvOutputProcessor implements OutputProcessor {
             }
         }
 
-
         try {
             FileOutputStream outputStream = new FileOutputStream(file);
             outputStream.write(result.toString().getBytes(Charset.forName("UTF-8")));
+            System.out.println(String.format("Output file with name '%s' was successfully formed", outputCsvFileName));
         } catch (Exception e) {
             throw new RuntimeException("Was unable to write to output file", e);
         }

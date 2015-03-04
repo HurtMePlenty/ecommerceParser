@@ -28,7 +28,8 @@ public class CsvSupplierSource implements SupplierSource {
             List<Item> result = new ArrayList<Item>();
             byte[] bytes = Files.readAllBytes(Paths.get(inputCsvFileName));
             String content = new String(bytes, StandardCharsets.UTF_8);
-            String[] lines = content.split("/n");
+            content = content.replace("\r", "");
+            String[] lines = content.split("\n");
 
             if (lines.length > 0) {
                 String header = lines[0];

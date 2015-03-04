@@ -4,12 +4,12 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="csvSupplierSource" class="ecommerceParser.supplierModule.CsvSupplierSource">
-        <property name="csvSeparator" value=","></property>
+        <property name="csvSeparator" value="\t"></property>
         <property name="inputCsvFileName" value="input.csv"></property>
     </bean>
 
     <bean id="csvOutputProcessor" class="ecommerceParser.outputModule.CsvOutputProcessor">
-        <property name="csvSeparator" value=","></property>
+        <property name="csvSeparator" value="\t"></property>
         <property name="outputCsvFileName" value="output.csv"></property>
     </bean>
 
@@ -20,15 +20,15 @@
             </list>
         </property>
         <property name="outputProcessor" ref="csvOutputProcessor"></property>
+        <property name="searchEngineList">
+            <list>
+                <ref bean="amazonSearchEngine"></ref>
+            </list>
+        </property>
     </bean>
 
     <bean id="amazonSearchEngine" class="ecommerceParser.searchModule.AmazonSearchEngine">
         <property name="engineName" value="Amazon"></property>
     </bean>
-
-    <bean id="amazonSearchEngine2" class="ecommerceParser.searchModule.AmazonSearchEngine">
-        <property name="engineName" value="Amazon"></property>
-    </bean>
-
 
 </beans>

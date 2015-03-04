@@ -8,4 +8,7 @@ repositories {
 dependencies {
     compile 'org.springframework:spring-context:4.0.6.RELEASE'
     compile 'commons-codec:commons-codec:1.9'
+    compile 'org.apache.httpcomponents:fluent-hc:4.2.1'
+    compile 'org.jsoup:jsoup:1.7.2'
+
 }

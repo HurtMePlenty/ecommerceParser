@@ -21,8 +21,8 @@ public class AmazonSearchEngine implements SearchEngine {
     private String engineName;
     private static final String AMAZON_DIRECT_URL = "http://www.amazon.com/s/?keywords=%s&page=1";
     private static final String ENDPOINT = "ecs.amazonaws.com";
-    private static final String AWS_SECRET_KEY = "GddwgIPu5HOCZlnulZlcQEJ5uHF26PDzjxHMij5F";
-    private static final String AWS_ACCESS_KEY_ID = "AKIAJB6FL7ISSVDIVWSQ";
+    private static final String AWS_SECRET_KEY = "";
+    private static final String AWS_ACCESS_KEY_ID = "";
 
     public void setEngineName(String engineName) {
         this.engineName = engineName;

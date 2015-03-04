@@ -4,12 +4,12 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="csvSupplierSource" class="ecommerceParser.supplierModule.CsvSupplierSource">
-        <property name="csvSeparator" value="\t"></property>
+        <property name="csvSeparator" value=","></property>
         <property name="inputCsvFileName" value="input.csv"></property>
     </bean>
 
     <bean id="csvOutputProcessor" class="ecommerceParser.outputModule.CsvOutputProcessor">
-        <property name="csvSeparator" value="\t"></property>
+        <property name="csvSeparator" value=","></property>
         <property name="outputCsvFileName" value="output.csv"></property>
     </bean>
 
